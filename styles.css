@@ -1,0 +1,228 @@
+/* ==========================================
+   1. ГЛОБАЛЬНІ СТИЛІ ТА СКИДАННЯ (BOX MODEL)
+   ========================================== */
+* {
+    box-sizing: border-box; /* Явне керування блоковою моделлю */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+    background-color: #0f172a; /* Темний сучасний фон slate-900 */
+    color: #e2e8f0;
+    line-height: 1.6;
+    padding: 30px 15px;
+}
+
+/* Контейнер для центрування макету */
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #1e293b; /* Картка slate-800 */
+    border-radius: 12px;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* ==========================================
+   2. ШАПКА (HEADER) - FLEXBOX LAYOUT
+   ========================================== */
+.main-header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    padding: 40px 30px;
+    text-align: center;
+    border-bottom: 2px solid #334155;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Селектор тегу */
+h1 {
+    font-size: 2.4rem;
+    color: #f8fafc;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.job-title {
+    font-size: 1.15rem;
+    color: #38bdf8; /* Акцентний блакитний */
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.contact-info {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    color: #94a3b8;
+}
+
+/* ==========================================
+   3. ОСНОВНИЙ КОНТЕНТ ТА КАРТКИ
+   ========================================== */
+.main-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Відступи між секціями через Flexbox */
+}
+
+/* Селектор класу */
+.card-section {
+    background-color: #0f172a;
+    padding: 22px 25px;
+    border-radius: 8px;
+    border-left: 4px solid #38bdf8;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Псевдоклас 1: :hover */
+.card-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.1);
+}
+
+.section-title {
+    font-size: 1.35rem;
+    color: #f8fafc;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 8px;
+}
+
+.about-text {
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+/* ==========================================
+   4. СТИЛІ СПИСКІВ ТА ЕЛЕМЕНТІВ
+   ========================================== */
+.skills-list, .project-details {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Псевдоклас 2: :first-child / :nth-child */
+.skills-list li {
+    background-color: #1e293b;
+    padding: 10px 14px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    color: #cbd5e1;
+}
+
+.skills-list li strong {
+    color: #38bdf8;
+}
+
+.project-item {
+    margin-bottom: 20px;
+    background-color: #1e293b;
+    padding: 18px;
+    border-radius: 6px;
+}
+
+.project-item:last-child {
+    margin-bottom: 0;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.project-header h3 {
+    font-size: 1.1rem;
+    color: #f1f5f9;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.project-details li {
+    position: relative;
+    padding-left: 18px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.project-details li::before {
+    content: "•";
+    color: #38bdf8;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* ==========================================
+   5. СТИЛІЗАЦІЯ ПОСИЛАНЬ ТА АТРИБУТІВ
+   ========================================== */
+a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #7dd3fc;
+    text-decoration: underline;
+}
+
+/* Селектор атрибута (вибирає посилання, що відкриваються у новій вкладці) */
+a[target="_blank"] {
+    font-weight: 500;
+}
+
+.btn-link {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #0284c7;
+    color: #ffffff !important;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-decoration: none !important;
+}
+
+.btn-link:hover {
+    background-color: #0369a1;
+}
+
+/* ==========================================
+   6. МЕДІАЗАПИТ (RESPONSIVE / MOBILE LAYOUT)
+   ========================================== */
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+
+    .main-content {
+        padding: 15px;
+    }
+
+    .project-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .card-section {
+        padding: 15px;
+    }
+}

@@ -2,70 +2,101 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Volodymyr Romanyuk</title>
+    <!-- 1. Зовнішнє підключення (External CSS) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- 2. Внутрішнє підключення (Internal CSS) - для виконання вимоги лабораторної -->
+    <style>
+        /* Акцентна риса під головним заголовком */
+        header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #38bdf8;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Volodymyr Romanyuk</h1>
-        <p>Junior SOC Analyst</p>
-        <div>
-            <p>
-                Львів, Україна <br> 
-                <a href="https://github.com/inflMETEOR">GitHub</a> |  
-                <a href="mailto:vromanyukjr@gmail.com">Email</a> | 
-                <a href="https://t.me/@DRAGON50080">Telegram</a>
-            </p>
-        </div>
-    </header>
+    <!-- Внутрішній контейнер макету -->
+    <div class="resume-container">
+        
+        <header class="main-header" id="header-section">
+            <h1 class="candidate-name">Volodymyr Romanyuk</h1>
+            <!-- 3. Інлайн-стиль (Inline CSS) - для виконання вимоги лабораторної -->
+            <p class="job-title" style="letter-spacing: 1.5px;">Junior SOC Analyst</p>
+            <div class="contact-info">
+                <p>
+                    <span class="location">Львів, Україна</span> <br> 
+                    <a href="https://github.com/inflMETEOR" target="_blank" class="social-link">GitHub</a> |  
+                    <a href="mailto:vromanyukjr@gmail.com" class="social-link">Email</a> | 
+                    <a href="https://t.me/@DRAGON50080" target="_blank" class="social-link">Telegram</a>
+                </p>
+            </div>
+        </header>
 
-    <main>
-        <section>
-            <h2>Про мене</h2>
-            <p>Я студент другого курсу, навчаюся на спецільаності "Кібербезпека". Вмію писати код на Python, поверхнево працювати з GitHub, непогано володію навичками frontend, володію англійською на рівні В2, вмію працювати з людьми. Шукаю стажування у передових компаніях з подальшою можливістю працевлаштування та співпраці.</p>
-        </section>
+        <main class="main-content">
+            <section class="card-section" id="about">
+                <h2 class="section-title">Про мене</h2>
+                <p class="about-text">
+                    Я студент другого курсу, навчаюся на спеціальності <strong>"Кібербезпека"</strong>. Вмію писати код на Python, працювати з GitHub, маю навички frontend-розробки, володію англійською мовою на рівні B2 та легко знаходжу спільну мову з людьми. Шукаю стажування у передових компаніях з подальшою можливістю працевлаштування та професійного зростання.
+                </p>
+            </section>
 
-        <section>
-            <h2>Технічні навички</h2>
-            <ul>
-                <li><strong>Мови програмування:</strong>[Python, JavaScript]</li>
-                <li><strong>Інструменти та середовища:</strong> [Git, GitHub, VS Code]</li>
-                <li><strong>Бази даних та мережі:</strong> [Реляційні БД, нормалізація, базові протоколи]</li>
-                <li><strong>Креативне мислення:</strong>Переможець конкурсу бізнес проектів від банку</li>
-                <li><strong>Володіння мовами:</strong>[Англійська - В2, Польська - А2, Українська - Native, Російська - Native]</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Проєкти</h2>
-            
-            <article>
-                <h3>Розробка на Python, Git та стандарти стилю коду — <a href="https://github.com/inflMETEOR/cybersecurity_python-labs/tree/main/labs/lab01">Переглянути код на GitHub</a></h3>
-                <p><strong>Стек:</strong>Pythone, Git, GitHub, Шифрування</p>
-                <ul>
-                    <li>Написав код для перевірки паролів на відповідність до заданих норм</li>
-                    <li>Реалізував алгоритм доступів користувачів до ресурсів</li>
-                    <li>Реалізував модуль для безпечної реєстрації та автентифікації користувачів</li>
+            <section class="card-section" id="skills">
+                <h2 class="section-title">Технічні навички</h2>
+                <ul class="skills-list">
+                    <li><strong>Мови програмування:</strong> Python, JavaScript</li>
+                    <li><strong>Інструменти та середовища:</strong> Git, GitHub, VS Code</li>
+                    <li><strong>Бази даних та мережі:</strong> Реляційні БД, нормалізація, базові мережеві протоколи</li>
+                    <li><strong>Креативне мислення:</strong> Переможець конкурсу бізнес-проєктів від банку</li>
+                    <li><strong>Володіння мовами:</strong> Англійська — B2, Польська — A2, Українська — Native, Російська — Native</li>
                 </ul>
-            </article>
+            </section>
 
-            <article>
-                <h3>Створення сайту — <a href="https://github.com/inflMETEOR/re">Переглянути код на GitHub</a></h3>
-                <p><strong>Стек:</strong> HTML, CSS</p>
-                <ul>
-                    <li>Створення візуальної частини сайту</li>
-                </ul>
-            </article>
-        </section>
+            <section class="card-section" id="projects">
+                <h2 class="section-title">Проєкти</h2>
+                
+                <article class="project-item">
+                    <div class="project-header">
+                        <h3>Розробка на Python, Git та стандарти стилю коду</h3>
+                        <a href="https://github.com/inflMETEOR/cybersecurity_python-labs/tree/main/labs/lab01" target="_blank" class="btn-link">GitHub Code &rarr;</a>
+                    </div>
+                    <p class="tech-stack"><strong>Стек:</strong> Python, Git, GitHub, Шифрування</p>
+                    <ul class="project-details">
+                        <li>Написав код для перевірки паролів на відповідність до заданих норм безпеки.</li>
+                        <li>Реалізував алгоритм розмежування доступів користувачів до ресурсів.</li>
+                        <li>Створив модуль для безпечної реєстрації та автентифікації користувачів.</li>
+                    </ul>
+                </article>
 
-        <section>
-            <h2>Освіта</h2>
-            <article>
-                <h3><a href="https://lpnu.ua">Львівський Політехнічний інститут</a></h3>
-                <p>Спеціальність - "Кібербезпека" | 2025 – 2029</p>
-            </article>
-        </section>
-    </main>
+                <article class="project-item">
+                    <div class="project-header">
+                        <h3>Створення вебсайту</h3>
+                        <a href="https://github.com/inflMETEOR/re" target="_blank" class="btn-link">GitHub Code &rarr;</a>
+                    </div>
+                    <p class="tech-stack"><strong>Стек:</strong> HTML5, CSS3</p>
+                    <ul class="project-details">
+                        <li>Розробка та верстка візуальної частини вебсайту.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="card-section" id="education">
+                <h2 class="section-title">Освіта</h2>
+                <article class="education-item">
+                    <h3><a href="https://lpnu.ua" target="_blank" class="institution-link">Національний університет "Львівська політехніка"</a></h3>
+                    <p class="edu-details">Спеціальність: <strong>"Кібербезпека"</strong> | 2025 – 2029</p>
+                </article>
+            </section>
+        </main>
+
+    </div>
 
 </body>
 </html>
