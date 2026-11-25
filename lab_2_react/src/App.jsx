@@ -3,6 +3,10 @@ import About_Me from './components/About_Me'
 import Technical_skills from './components/Technical_skills'
 import Projects from './components/Projects'
 import Education from './components/Education'
+import Footer from './components/Footer'
+import Reviews from './components/Review'
+import ContactModal from './components/ContactModal'
+import './App.css'
 
 function App() {
   return (
@@ -14,8 +18,11 @@ function App() {
           <Technical_skills />
           <Projects />
           <Education />
+          <Reviews />
+          <Footer />
         </main>
       </div>
+      <ContactModal />
     </div>
   );
 }

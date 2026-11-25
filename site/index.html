@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Volodymyr Romanyuk</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        header::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #38bdf8;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="resume-container">
+
+        <header class="main-header" id="header-section">
+            <h1 class="candidate-name">Volodymyr Romanyuk</h1>
+            <p class="job-title" style="letter-spacing: 1.5px;">Junior SOC Analyst</p>
+            <div class="contact-info">
+                <p>
+                    <span class="location">Львів, Україна</span> <br>
+                    <a href="https://github.com/inflMETEOR" target="_blank" class="social-link">GitHub</a> |
+                    <a href="mailto:vromanyukjr@gmail.com" class="social-link">Email</a> |
+                    <a href="https://t.me/@DRAGON50080" target="_blank" class="social-link">Telegram</a>
+                </p>
+                <button id="theme-toggle-btn" class="btn-link" type="button" style="margin-top: 15px; cursor: pointer;">
+                    Змінити тему
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="card-section" id="about">
+                <h2 class="section-title">Про мене</h2>
+                <p class="about-text">
+                    Я студент другого курсу, навчаюся на спеціальності <strong>"Кібербезпека"</strong>. Вмію писати код
+                    на Python, працювати з GitHub, маю навички frontend-розробки, володію англійською мовою на рівні B2
+                    та легко знаходжу спільну мову з людьми. Шукаю стажування у передових компаніях з подальшою
+                    можливістю працевлаштування та професійного зростання.
+                </p>
+            </section>
+
+            <section class="card-section" id="skills">
+                <h2 class="section-title">Технічні навички</h2>
+                <ul class="skills-list">
+                    <li><strong>Мови програмування:</strong> Python, JavaScript</li>
+                    <li><strong>Інструменти та середовища:</strong> Git, GitHub, VS Code</li>
+                    <li><strong>Бази даних та мережі:</strong> Реляційні БД, нормалізація, базові мережеві протоколи
+                    </li>
+                    <li><strong>Креативне мислення:</strong> Переможець конкурсу бізнес-проєктів від банку</li>
+                    <li><strong>Володіння мовами:</strong> Англійська — B2, Польська — A2, Українська — Native,
+                        Російська — Native</li>
+                </ul>
+            </section>
+
+            <section class="card-section" id="projects">
+                <h2 class="section-title">Проєкти</h2>
+
+                <article class="project-item">
+                    <div class="project-header">
+                        <h3>Розробка на Python, Git та стандарти стилю коду</h3>
+                        <a href="https://github.com/inflMETEOR/cybersecurity_python-labs/tree/main/labs/lab01"
+                            target="_blank" class="btn-link">GitHub Code &rarr;</a>
+                    </div>
+                    <p class="tech-stack"><strong>Стек:</strong> Python, Git, GitHub, Шифрування</p>
+                    <ul class="project-details">
+                        <li>Написав код для перевірки паролів на відповідність до заданих норм безпеки.</li>
+                        <li>Реалізував алгоритм розмежування доступів користувачів до ресурсів.</li>
+                        <li>Створив модуль для безпечної реєстрації та автентифікації користувачів.</li>
+                    </ul>
+                </article>
+
+                <article class="project-item">
+                    <div class="project-header">
+                        <h3>Створення вебсайту</h3>
+                        <a href="https://github.com/inflMETEOR/re" target="_blank" class="btn-link">GitHub Code
+                            &rarr;</a>
+                    </div>
+                    <p class="tech-stack"><strong>Стек:</strong> HTML5, CSS3</p>
+                    <ul class="project-details">
+                        <li>Розробка та верстка візуальної частини вебсайту.</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section class="card-section" id="education">
+                <h2 class="section-title">Освіта</h2>
+                <article class="education-item">
+                    <h3><a href="https://lpnu.ua" target="_blank" class="institution-link">Національний університет
+                            "Львівська політехніка"</a></h3>
+                    <p class="edu-details">Спеціальність: <strong>"Кібербезпека"</strong> | 2025 – 2029</p>
+                </article>
+            </section>
+
+            <section class="card-section" id="reviews">
+                <h2 class="section-title">Відгуки попередніх роботодавців</h2>
+                <div id="comments-container">
+
+                </div>
+            </section>
+
+
+            <section class="card-section" id="system-footer">
+                <h2 class="section-title">Системна інформація</h2>
+                <div id="footer-content" class="about-text">
+
+                </div>
+            </section>
+
+
+            <div id="contact-modal" class="modal-overlay">
+                <div class="modal-card">
+                    <button id="close-modal-btn" class="close-btn" type="button">&times;</button>
+                    <h3 class="modal-title">Зворотний зв'язок</h3>
+                    <p class="modal-subtitle">Залиште свої дані, і я зв'яжуся з вами!</p>
+
+                    <form action="https://formspree.io/f/mljbrend" method="POST" class="feedback-form">
+                        <div class="form-group">
+                            <label>
+                                Ім'я:
+                                <input type="text" name="name" required placeholder="Ваше ім'я">
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Email:
+                                <input type="email" name="email" required placeholder="name@example.com">
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Телефон:
+                                <input type="tel" name="phone" required placeholder="+380XXXXXXXXX">
+
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Повідомлення:
+                                <textarea name="message" rows="4" required
+                                    placeholder="Текст вашого повідомлення..."></textarea>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-link submit-btn">Надіслати</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <script src="javaScript.js"></script>
+</body>
+
+</html>
